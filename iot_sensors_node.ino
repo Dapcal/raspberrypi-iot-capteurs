@@ -226,7 +226,7 @@ int getPPM(float volts, float *pcurve) {
 void capteurHumidite()
   {
     Serial.print("DHT22, \t");
-    int chk = DHT.read22(DHT22_PIN);  //读取数据
+    int chk = DHT.read22(DHT22_PIN);
     switch (chk)
     {
       case DHTLIB_OK:
