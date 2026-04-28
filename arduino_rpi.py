@@ -5,10 +5,10 @@ import sqlite3
 import requests
 
 # CONFIG
-SERIAL_PORT = 'COM12' #'/dev/ttyUSB0'
+SERIAL_PORT ='/dev/ttyACM0'
 BAUDRATE = 9600
 
-API_KEY = "3038BJIQXJK2JR8M"
+API_KEY = "YOUR API KEY"
 THINGSPEAK_URL = "https://api.thingspeak.com/update"
 
 # Base de données
