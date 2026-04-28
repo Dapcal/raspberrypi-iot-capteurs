@@ -13,10 +13,14 @@ Les données mesurées sont :
 
 ---
 
-## 🧠 Architecture du système
+## 🧠 Architecture du systèmeI
+Le système suit une architecture IoT en pipeline :
 
-Arduino → USB → Raspberry Pi → Base de données → Internet (clé USB) → ThingSpeak API
+Capteurs → Arduino → Raspberry Pi → SQLite + JSONL → Internet (clé USB) →Cloud (ThingSpeak)
 
+- Acquisition temps réel
+- Double stockage (fiabilité)
+- Transmission cloud
 ---
 
 ## ⚙️ Technologies utilisées
@@ -182,6 +186,19 @@ ls /dev/tty*
 * Utiliser HTTPS pour les communications
 * Restreindre les accès au Raspberry Pi
 
+Ce système présente plusieurs risques :
+
+- Communication série non chiffrée
+- Injection de données JSON
+- Exposition de la clé API
+
+### Contre-mesures
+
+- Validation stricte des données
+- Utilisation de variables d’environnement (.env)
+- Restriction des permissions Linux
+- Utilisation de HTTPS
+
 ---
 
 ## 🚀 Améliorations possibles
@@ -193,9 +210,10 @@ ls /dev/tty*
 
 ---
 
+
 ## 👨‍💻 Auteur
 
-Projet réalisé par **Dapcal**
+Projet réalisé par **Dapoba calixte Igor BICABA**
 
 ---
 
