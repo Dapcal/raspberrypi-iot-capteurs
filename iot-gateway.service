@@ -1,0 +1,18 @@
+[Unit]
+Description= Iot capteurs Raspberry pi
+After=network.target dev-ttyACM0.device
+
+[Service]
+User=bicaba
+WorkingDirectory=/home/bicaba/raspberrypi-iot-capteurs
+
+ExecStart=/home/bicaba/raspberrypi-iot-capteurs/venv/bin/python /home/bicaba/raspberrypi-iot-capteurs/arduino_rpi.py
+
+
+
+Restart=always
+RestartSec=5
+Environnement=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
