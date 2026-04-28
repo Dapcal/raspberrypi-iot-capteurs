@@ -60,7 +60,9 @@ Capteurs → Arduino → Raspberry Pi → SQLite + JSONL → Internet (clé USB)
 
 ```bash
 .
-├── main.py        # Script principal Python
+├──iot_sensors_node.ino # code source embarqué pour l'arduino
+├── gateway.py        # Script principal Python Script de passerelle Python/Serial/Cloud
+├── iot-gateway.service # service deploye pour gateway.py
 ├── capteurs.db    # Base de données SQLite (générée automatiquement)
 └── README.md      # Documentation
 ```
